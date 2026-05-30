@@ -1,0 +1,40 @@
+﻿@model RegisterVM
+@{
+    ViewData["Title"] = "Register";
+
+}
+<form asp-action="Register" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" class="form-control" placeholder="Enter email">
+        <span asp-validation-for="Email " class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Username" class="form-label"></label>
+        <input asp-for="Username" class="form-control" placeholder="Enter username">
+        <span asp-validation-for="Username" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Password" class="form-label"></label>
+        <input asp-for="Password" type="password" class="form-control" placeholder="Password">
+        <span asp-validation-for="Password" class="text-danger"></span>     
+    </div>
+    <div class="form-group">
+        <label asp-for="ConfirmPassword" class="form-label"></label>
+        <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="Confirm Password">
+        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address" class="form-label"></label>
+        <input asp-for="Address"  class="form-control" >
+        <span asp-validation-for="Address" class="text-danger"></span>
+
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+@section validationScripts {
+    <partial name="_ValidationScriptsPartial" />
+}

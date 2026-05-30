@@ -1,0 +1,11 @@
+﻿@model Student
+@{
+
+    ViewData["Title"] = "Details";
+
+}
+<h1>  @Model.name Details</h1>
+<partial name="PartialViews/Deletedetailspartialview" />
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+<a asp-action="Index" class="btn btn-success">Back To List</a>

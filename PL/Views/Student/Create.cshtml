@@ -1,0 +1,20 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "Create";
+
+}
+
+<h1>Create New Student</h1>
+<form class="mt-2" asp-action="Create" method="post" enctype="multipart/form-data">
+
+
+    <partial name="PartialViews/Createeditpartialview"/>
+
+    <div class="mt-2">
+    <input type="submit" value="Submit" class="btn btn-success" />
+    <a asp-action="Index" class="btn btn-primary">Back To List</a>
+    </div>
+</form>
+@section validationScripts {
+    <partial name="_ValidationScriptsPartial" />
+}

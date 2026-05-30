@@ -1,0 +1,7 @@
+﻿@model Student
+<h1> Are You Sure You Want To Delete @Model.name Student </h1>
+<form class="mt-2" asp-action="Delete" method="post">
+    <partial name="PartialViews/Deletedetailspartialview" />
+    <input type="submit" value="Delete" class="btn btn-danger" />
+    <a asp-action="Index" class="btn btn-primary">Cancel</a>
+</form>
